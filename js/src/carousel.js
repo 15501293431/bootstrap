@@ -303,7 +303,7 @@ class Carousel {
     }
 
     const end = (event) => {
-      if (this._pointerEvent) {
+      if (this._pointerEvent && (originEvent.pointerType === PointerType.TOUCH || originEvent.pointerType === PointerType.PEN)) {
         this.touchDeltaX = event.originalEvent.clientX - this.touchStartX
       }
 

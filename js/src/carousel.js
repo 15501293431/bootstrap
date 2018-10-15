@@ -283,7 +283,7 @@ class Carousel {
 
       if (this._pointerEvent && (originEvent.pointerType === PointerType.TOUCH || originEvent.pointerType === PointerType.PEN)) {
         this.touchStartX = originEvent.clientX
-      } else {
+      } else if (!this._pointerEvent) {
         this.touchStartX = originEvent.touches[0].clientX
       }
     }

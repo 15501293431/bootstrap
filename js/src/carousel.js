@@ -293,6 +293,7 @@ class Carousel {
 
       // ensure swiping with one touch and not pinching
       if (event.originalEvent.touches && event.originalEvent.touches.length > 1) {
+        this.touchDeltaX = 0;
         return
       }
 

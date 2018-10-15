@@ -326,7 +326,6 @@ class Carousel {
     if (this._pointerEvent) {
       $(this._element).on(Event.POINTERDOWN, (event) => start(event))
       $(this._element).on(Event.POINTERUP, (event) => end(event))
-      $(this._element).on(Event.POINTERCANCEL, (event) => end(event))
 
       this._element.classList.add(ClassName.POINTER_EVENT)
     } else {

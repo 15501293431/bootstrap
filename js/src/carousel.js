@@ -284,7 +284,7 @@ class Carousel {
       if (this._pointerEvent && (originEvent.pointerType === PointerType.TOUCH || originEvent.pointerType === PointerType.PEN)) {
         this.touchStartX = originEvent.clientX
       } else {
-        this.touchStartX = originEvent.touches[0].pageX
+        this.touchStartX = originEvent.touches[0].clientX
       }
     }
 
@@ -298,7 +298,7 @@ class Carousel {
       }
 
       if (!this._pointerEvent) {
-        this.touchDeltaX = event.originalEvent.touches[0].pageX - this.touchStartX
+        this.touchDeltaX = event.originalEvent.touches[0].clientX - this.touchStartX
       }
     }
 
